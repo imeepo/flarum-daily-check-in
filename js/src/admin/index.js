@@ -8,14 +8,9 @@ app.initializers.add('imeepo-checkin', () => {
         <div className="Form-group">
           <label>{app.translator.trans('imeepo-checkin.admin.settings.reward-money')}</label>
           <div class="helpText">{app.translator.trans('imeepo-checkin.admin.settings.reward-money-requirement')}</div>
-          <input type="string" className="FormControl" step="any" bidi={this.setting('imeepo-forum-checkin.checkinRewardMoney')} />
+          <input type="number" className="FormControl" step="any" bidi={this.setting('imeepo-forum-checkin.checkinRewardMoney')} />
         </div>
       );
-    })
-    .registerSetting({
-      setting: 'imeepo-forum-checkin.randMoney',
-      label: app.translator.trans('imeepo-checkin.admin.settings.rand-money'),
-      type: 'switch',
     })
     .registerSetting({
       setting: 'imeepo-forum-checkin.checkinTimeZone',

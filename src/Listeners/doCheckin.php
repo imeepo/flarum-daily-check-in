@@ -56,19 +56,7 @@ class doCheckin{
                     // app("log")->error($user->total_continuous_checkin_count);
 
                     if(isset($user->money)===true){
-                        $checkinRewardMoney = (string)$this->settings->get('imeepo-forum-checkin.checkinRewardMoney', 0);
-                        $randMoney = (int)$this->settings->get('imeepo-forum-checkin.randMoney', 0);
-                        if($randMoney == 1){
-                            $tmpRand = explode('-', $checkinRewardMoney);
-                            $start = $tmpRand[0];
-                            $end = $tmpRand[1];
-                            if(is_numeric($start)&&is_numeric($end)){
-                                $checkinRewardMoney = rand($start, $end);
-                            }else{
-                                $checkinRewardMoney = 0;
-                            }
-                        }
-
+                        $checkinRewardMoney = (float)$this->settings->get('imeepo-forum-checkin.checkinRewardMoney', 0);
                         $user->money+=$checkinRewardMoney;
                     }
 

@@ -20,9 +20,8 @@ $extend = [
     (new Extend\ApiSerializer(UserSerializer::class))->attributes(AddUserCheckinAttributes::class),
     (new Extend\Settings())
         ->serializeToForum('forumCheckinRewarMoney', 'imeepo-forum-checkin.checkinRewardMoney',function ($raw) {
-            return (string)$raw;
+            return (float)$raw;
         })
-        ->serializeToForum('forumRandMoney', 'imeepo-forum-checkin.randMoney', 'strval', 0)
         ->serializeToForum('forumAutoCheckin', 'imeepo-forum-checkin.autoCheckIn', 'intval', 0)
         ->serializeToForum('forumAutoCheckinDelay', 'imeepo-forum-checkin.autoCheckInDelay', 'intval', 0)
         ->serializeToForum('forumCheckinTimeZone', 'imeepo-forum-checkin.checkinTimeZone', 'intval', 0)

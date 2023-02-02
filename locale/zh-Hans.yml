@@ -8,7 +8,6 @@ imeepo-checkin:
     try-again-later: 请稍后再试
   admin:
     settings:
-      rand-money: 随机奖励（签到奖励需要填写x-y，如：0-100）
       auto-check-in: 自动签到
       auto-check-in-delay: 自动签到延迟（毫秒）
       timezone: 时区设置（默认东八区:8，UTC:0）
